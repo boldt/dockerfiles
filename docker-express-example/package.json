@@ -1,0 +1,15 @@
+{
+  "name": "docker-express-example",
+  "version": "0.0.1",
+  "description": "Hello World Example with Docker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Dennis Boldt",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.15.2"
+  }
+}
