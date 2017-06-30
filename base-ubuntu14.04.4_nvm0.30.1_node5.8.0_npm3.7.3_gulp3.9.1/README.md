@@ -1,4 +1,4 @@
-# Docker with Ubuntu + nvm 0.30.1 + Node 5.8.0 + npm3.7.3 + gulp3.9.1
+# Docker with Ubuntu 14.04.4 + nvm 0.30.1 + Node 5.8.0 + npm3.7.3 + gulp3.9.1
 
 This Dockerfile is used to create the image [boldt/base-ubuntu14.04.4_nvm0.30.1_node5.8.0_npm3.7.3_gulp3.9.1](https://hub.docker.com/r/boldt/base-ubuntu14.04.4_nvm0.30.1_node5.8.0_npm3.7.3_gulp3.9.1/).
 
