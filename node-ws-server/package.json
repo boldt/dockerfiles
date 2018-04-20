@@ -1,0 +1,14 @@
+{
+  "name": "node-ws-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Dennis Boldt",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^5.1.1"
+  }
+}
