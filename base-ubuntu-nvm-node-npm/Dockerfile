@@ -1,11 +1,10 @@
-# Dockerfile for boldt/base-ubuntu_nvm_node_npm_webpack
+# Dockerfile for boldt/base-ubuntu-nvm-node-npm
 
 ##############################################################################
-# Install
-# - ubuntu (14.04.5)
+# Install Ubuntu
 ##############################################################################
 
-FROM ubuntu:14.04.5
+FROM ubuntu:16.04
 
 ##############################################################################
 # Replace shell with bash so we can source files
@@ -18,15 +17,15 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ##############################################################################
 
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 5.8.0
+ENV NODE_VERSION 8.11.1
 
 RUN apt-get update --fix-missing && \
 	apt-get install -y curl && \
 	##############################################################################
-	# Install: nvm (v0.33.2), node (5.8.0) and npm (3.7.3)
+	# Install: nvm, node and npm
 	# @see: http://stackoverflow.com/questions/25899912/install-nvm-in-docker
 	##############################################################################
-	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash && \
+	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash && \
 	source $NVM_DIR/nvm.sh && \
 	nvm install $NODE_VERSION && \
 	nvm alias default $NODE_VERSION && \
