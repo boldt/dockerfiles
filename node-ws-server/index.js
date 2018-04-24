@@ -7,11 +7,12 @@ var wss;
 
 if (fs.existsSync('/app/cert.pem') && fs.existsSync('/app/key.pem')) {
 	server = new https.createServer({
-	  cert: fs.readFileSync('/path/to/cert.pem'),
-	  key: fs.readFileSync('/path/to/key.pem')
+	  cert: fs.readFileSync('/app/cert.pem'),
+	  key: fs.readFileSync('/app/key.pem')
 	});
 	wss = new WebSocket.Server({ server });
 } else {
+	console.log("Insecure WebSocket server started!");
 	wss = new WebSocket.Server({ port: 8080 });
 }
 
@@ -27,5 +28,6 @@ wss.on('connection', function connection(ws) {
 });
 
 if(server) {
+  console.log("Secure WebSocket server started!");
   server.listen(8080);
 }
