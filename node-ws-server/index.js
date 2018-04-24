@@ -1,8 +1,19 @@
 const WebSocket = require('ws');
+const fs = require('fs');
+const https = require('https');
 
-const wss = new WebSocket.Server({
-	port: 8080
-});
+var server;
+var wss;
+
+if (fs.existsSync('/app/cert.pem') && fs.existsSync('/app/key.pem')) {
+	server = new https.createServer({
+	  cert: fs.readFileSync('/path/to/cert.pem'),
+	  key: fs.readFileSync('/path/to/key.pem')
+	});
+	wss = new WebSocket.Server({ server });
+} else {
+	wss = new WebSocket.Server({ port: 8080 });
+}
 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(data) {
@@ -14,3 +25,7 @@ wss.on('connection', function connection(ws) {
     });
   });
 });
+
+if(server) {
+  server.listen(8080);
+}

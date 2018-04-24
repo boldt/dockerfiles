@@ -8,11 +8,11 @@ connection.onopen = function () {
 
 // Log errors
 connection.onerror = function (error) {
-  console.log('WebSocket Error ' + error);
+  console.log('WebSocket Error ', error);
 };
 
 // Log messages from the server
 connection.onmessage = function (e) {
-  console.log('Msg from server: ' + e.data);
+  console.log('Msg from server: ', e.data);
 };
 </script>
