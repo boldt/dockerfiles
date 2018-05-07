@@ -35,6 +35,11 @@ RUN cd /tmp/ && \
     make install && \
     a2enmod ssl md
 
+# Configure all needed modules
+RUN a2enmod proxy && \
+		a2enmod proxy_http && \
+		a2enmod proxy_http2
+
 ##############################################################################
 # Startup apache2
 ##############################################################################
