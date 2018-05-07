@@ -21,15 +21,15 @@ RUN apt-get update --fix-missing && \
 # Install mod_md
 ##############################################################################
 
-ADD https://github.com/icing/mod_md/releases/download/v1.0.3/mod_md-1.0.3.tar.gz /tmp/
+ADD https://github.com/icing/mod_md/releases/download/v1.1.10/mod_md-1.1.10.tar.gz /tmp/
 
 # Needed by `a2enmod md`, thus we copy them before we build mod_md
 COPY etc/apache2/mods-available/md.load /etc/apache2/mods-available/
 COPY etc/apache2/mods-available/md.conf /etc/apache2/mods-available/
 
 RUN cd /tmp/ && \
-    tar -zxvf mod_md-1.0.3.tar.gz && \
-    cd /tmp/mod_md-1.0.3 && \
+    tar -zxvf mod_md-1.1.10.tar.gz && \
+    cd /tmp/mod_md-1.1.10 && \
     ./configure --with-apxs=/usr/bin/apxs && \
     make && \
     make install && \
