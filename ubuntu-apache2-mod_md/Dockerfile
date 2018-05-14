@@ -33,12 +33,7 @@ RUN cd /tmp/ && \
     ./configure --with-apxs=/usr/bin/apxs && \
     make && \
     make install && \
-    a2enmod ssl md
-
-# Configure all needed modules
-RUN a2enmod proxy && \
-		a2enmod proxy_http && \
-		a2enmod proxy_http2
+    a2enmod ssl md proxy proxy_http proxy_http2
 
 ##############################################################################
 # Startup apache2
