@@ -7,7 +7,9 @@ The following versions are available:
 
 | Tag                 | Ubuntu  | apache  | mod_md | Image Size   |
 |-------------------- |-------- | ------- |------- | ------------ |
-| `0.0.1` (`latest`)  | 14.04.5 | 2.4.29  | 1.0.3  | 431 MB       |
+| `0.0.2` (`latest`)  | 14.04.5 | 2.4.34  | 1.1.16 | 434 MB       |
+| `0.0.1`             | 14.04.5 | 2.4.29  | 1.0.3  | 431 MB       |
+
 
 
 ## Use this image
@@ -54,9 +56,9 @@ Even the certs are renewed automatically, the configuration still needs to be re
 docker build -t boldt/ubuntu-apache2-mod_md .
 
 # Tag
-docker tag boldt/ubuntu-apache2-mod_md boldt/ubuntu-apache2-mod_md:0.0.1
+docker tag boldt/ubuntu-apache2-mod_md boldt/ubuntu-apache2-mod_md:0.0.2
 
 # Push
 docker push boldt/ubuntu-apache2-mod_md:latest
-docker push boldt/ubuntu-apache2-mod_md:0.0.1
+docker push boldt/ubuntu-apache2-mod_md:0.0.2
 ```
