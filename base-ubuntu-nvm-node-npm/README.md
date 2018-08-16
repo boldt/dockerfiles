@@ -9,7 +9,8 @@ The following versions are available:
 |-------------------- |-------- | ------- |------- |------- | ------ |
 | `0.0.1`             | 14.04.5 | 0.33.2  | 5.8.0  | 3.7.3  | 390 MB |
 | `0.0.2`             | 14.04.5 | 0.33.2  | 5.8.0  | 3.7.3  | 237 MB |
-| `0.0.3` (`latest`)  | 16.04   | 0.33.8  | 8.11.1 | 5.6.0  | 185 MB |
+| `0.0.3`             | 16.04   | 0.33.8  | 8.11.1 | 5.6.0  | 185 MB |
+| `0.0.4` (`latest`)  | 18.04   | 0.33.11 | 10.5.0 | 6.1.0  | 155 MB |
 
 ## Use this image
 
@@ -25,16 +26,16 @@ FROM boldt/base-ubuntu-nvm-node-npm
 
 ```
 # Build
-docker build -t boldt/base-ubuntu-nvm-node-npm:0.0.3 .
+docker build -t boldt/base-ubuntu-nvm-node-npm:0.0.4 .
 
 # Detect versions
-docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.3 /bin/bash
+docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.4 /bin/bash
   node --version
   npm --version
   nvm --version
 
 # Tag and Push
-docker tag boldt/base-ubuntu-nvm-node-npm:0.0.3 boldt/base-ubuntu-nvm-node-npm:latest
-docker push boldt/base-ubuntu-nvm-node-npm:0.0.3
+docker tag boldt/base-ubuntu-nvm-node-npm:0.0.4 boldt/base-ubuntu-nvm-node-npm:latest
+docker push boldt/base-ubuntu-nvm-node-npm:0.0.4
 docker push boldt/base-ubuntu-nvm-node-npm:latest
 ```
