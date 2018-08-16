@@ -1,4 +1,4 @@
-# Docker with Ubuntu + nvm + node + npm
+# Docker image with Ubuntu + nvm + node + npm
 
 * Docker image: [boldt/base-ubuntu-nvm-node-npm](https://hub.docker.com/r/boldt/base-ubuntu-nvm-node-npm/)
 * Github Repo: [boldt/dockerfiles/base-ubuntu-nvm-node-npm](https://github.com/boldt/dockerfiles/tree/master/base-ubuntu-nvm-node-npm/).
@@ -38,4 +38,5 @@ docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.4 /bin/bash
 docker tag boldt/base-ubuntu-nvm-node-npm:0.0.4 boldt/base-ubuntu-nvm-node-npm:latest
 docker push boldt/base-ubuntu-nvm-node-npm:0.0.4
 docker push boldt/base-ubuntu-nvm-node-npm:latest
+>>>>>>> 34871789cbb1a1dfaf4a309149aa2c8c4adc4695
 ```
