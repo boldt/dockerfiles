@@ -19,7 +19,7 @@ RUN rm /bin/sh && \
 ##############################################################################
 
 ENV NVM_DIR /root/.nvm
-ENV NODE_VERSION 10.5.0
+ENV NODE_VERSION 10.9.0
 
 RUN apt-get update --fix-missing && \
 	apt-get install -y curl && \
