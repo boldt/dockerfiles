@@ -7,22 +7,31 @@ This Dockerfile is used to create the image [boldt/docker-express-example](https
 Run:
 
 ```
-docker pull boldt/docker-express-example:0.0.1
-docker run -d -p 3000:3000 --name docker-express-example boldt/docker-express-example:0.0.1
+docker pull boldt/docker-express-example:latest
+
+# Run on port 3000
+docker run --rm -d -p 3000:3000 --name docker-express-example boldt/docker-express-example:latest
+docker stop docker-express-example:latest
+
+# Run on port 5000 (with env var)
+EXTERNAL_PORT=5000
+docker run --rm -d -p $EXTERNAL_PORT:3000 -e PORT=$EXTERNAL_PORT --name docker-express-example boldt/docker-express-example:latest
+docker stop docker-express-example:latest
 ```
 
 Or add to your Dockerfile
 
 ```
-FROM boldt/docker-express-example:0.0.1
+FROM boldt/docker-express-example:latest
 ```
 
-## Build and push
+## Push
 
 (For own documentation)
 
 ```
-docker build -t boldt/docker-express-example:0.0.1 .
-docker push boldt/base-ubuntu_14.04.3-node_5.8.0:0.0.2
+VERSION=0.0.2
+docker tag boldt/docker-express-example:latest boldt/docker-express-example:$VERSION
+docker push boldt/docker-express-example:$VERSION
 ```
 
