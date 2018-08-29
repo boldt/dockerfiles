@@ -31,11 +31,12 @@ node-ws-server:
 
 #######################################################################
 
-ubuntu-apache2-mod_md:
-  variables:
-    CONTAINER_IMAGE: boldt/ubuntu-apache2-mod_md
-    FOLDER: ./ubuntu-apache2-mod_md
-  script:
-  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest --build-arg CACHEBUST=$(date +%s) $FOLDER
-  - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
-  - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
+#ubuntu-apache2-mod_md:
+#  variables:
+#    CONTAINER_IMAGE: boldt/ubuntu-apache2-mod_md
+#    FOLDER: ./ubuntu-apache2-mod_md
+#  script:
+#  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest --build-arg CACHEBUST=$(date +%s) $FOLDER
+#  - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
+#  - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
+
