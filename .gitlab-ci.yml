@@ -1,34 +1,41 @@
 base-ubuntu-nvm-node-npm:
   variables:
     CONTAINER_IMAGE: boldt/base-ubuntu-nvm-node-npm
+    FOLDER: ./base-ubuntu-nvm-node-npm
   script:
-  - docker build -t $CONTAINER_IMAGE:latest ./base-ubuntu-nvm-node-npm
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
+  - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
 
 #######################################################################
 
 docker-express-example:
   variables:
     CONTAINER_IMAGE: boldt/docker-express-example
+    FOLDER: ./docker-express-example
   script:
-  - docker build -t $CONTAINER_IMAGE:latest ./docker-express-example
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
+  - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
 
 #######################################################################
 
 node-ws-server:
   variables:
     CONTAINER_IMAGE: boldt/node-ws-server
+    FOLDER: ./node-ws-server
   script:
-  - docker build -t $CONTAINER_IMAGE:latest ./node-ws-server
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
+  - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
 
 #######################################################################
 
 ubuntu-apache2-mod_md:
   variables:
     CONTAINER_IMAGE: boldt/ubuntu-apache2-mod_md
+    FOLDER: ./ubuntu-apache2-mod_md
   script:
-  - docker build -t $CONTAINER_IMAGE:latest ./ubuntu-apache2-mod_md
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
-
+  - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
