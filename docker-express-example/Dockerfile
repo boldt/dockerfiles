@@ -1,4 +1,4 @@
-FROM node:6.10.0
+FROM node:10.9.0-stretch
 MAINTAINER Dennis Boldt info@dennis-boldt.de
 EXPOSE 3000
 RUN mkdir -p /usr/src/app  
