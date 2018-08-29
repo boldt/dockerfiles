@@ -3,7 +3,7 @@ base-ubuntu-nvm-node-npm:
     CONTAINER_IMAGE: boldt/base-ubuntu-nvm-node-npm
     FOLDER: ./base-ubuntu-nvm-node-npm
   script:
-  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest CACHEBUST=$(date +%s) $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
   - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
 
@@ -14,7 +14,7 @@ docker-express-example:
     CONTAINER_IMAGE: boldt/docker-express-example
     FOLDER: ./docker-express-example
   script:
-  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest CACHEBUST=$(date +%s) $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
   - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
 
@@ -25,7 +25,7 @@ node-ws-server:
     CONTAINER_IMAGE: boldt/node-ws-server
     FOLDER: ./node-ws-server
   script:
-  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest CACHEBUST=$(date +%s) $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
   - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
 
@@ -36,6 +36,6 @@ ubuntu-apache2-mod_md:
     CONTAINER_IMAGE: boldt/ubuntu-apache2-mod_md
     FOLDER: ./ubuntu-apache2-mod_md
   script:
-  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest $FOLDER
+  - docker build -t $CI_REGISTRY/$CONTAINER_IMAGE:latest CACHEBUST=$(date +%s) $FOLDER
   - docker push $CI_REGISTRY/$CONTAINER_IMAGE:latest
   - docker rmi $CI_REGISTRY/$CONTAINER_IMAGE:latest
