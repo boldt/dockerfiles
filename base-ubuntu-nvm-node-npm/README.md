@@ -34,6 +34,7 @@ docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.5 /bin/bash
   node --version
   npm --version
   nvm --version
+```
 
 # Tag and Push
 

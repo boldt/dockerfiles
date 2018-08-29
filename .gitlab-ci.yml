@@ -1,0 +1,8 @@
+docker-express-example:
+  variables:
+    CONTAINER_IMAGE: $CI_REGISTRY/$CI_REGISTRY_IMAGE
+  script:
+  - docker build -t $CONTAINER_IMAGE:latest ./docker-express-example
+  - docker push $CONTAINER_IMAGE:latest
+
+
