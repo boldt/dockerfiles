@@ -3,6 +3,7 @@ var app = express();
 var port = 3000;
 
 app.get('/', function (req, res) {
+  console.log("Called endpoint /");
   if (process.env && process.env.PORT) {
     res.send('Hello world from internal port ' +  port + ' and external port ' + process.env.PORT);
   } else {
