@@ -10,6 +10,12 @@ app.get('/', function (req, res) {
   }
 });
 
+console.time('interval');
+setInterval(() => {
+	console.timeEnd('interval');
+	console.time('interval');
+}, 1000)
+
 app.listen(3000, function () {
 
   if (process.env && process.env.PORT) {
