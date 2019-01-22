@@ -31,7 +31,7 @@ node-ws-server:
 
 #######################################################################
 
-#ubuntu-apache2-mod_md:
+#ubuntu-apache2-mod-md:
 #  variables:
 #    CONTAINER_IMAGE: boldt/ubuntu-apache2-mod_md
 #    FOLDER: ./ubuntu-apache2-mod_md

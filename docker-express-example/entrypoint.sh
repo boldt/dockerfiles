@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo "RUN with args"
-echo $@
-
-CMD="npm start"
+CMD="$@"
+echo "RUN: $CMD"
 
 if [[ -z "${LOG}" ]]; then
 	echo "Log to stdout"

@@ -38,3 +38,4 @@ docker tag boldt/docker-express-example:latest boldt/docker-express-example:$VER
 docker push boldt/docker-express-example:latest
 docker push boldt/docker-express-example:$VERSION
 ```
+

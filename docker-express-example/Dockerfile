@@ -13,5 +13,5 @@ RUN npm install
 
 STOPSIGNAL SIGTERM
 
-CMD ["/app/entrypoint.sh"]
-
+ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["npm", "start"]
