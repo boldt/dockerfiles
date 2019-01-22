@@ -5,10 +5,13 @@ MAINTAINER Dennis Boldt info@dennis-boldt.de
 ARG CACHEBUST=0
 
 EXPOSE 3000
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /app
 RUN mkdir -p /log
-WORKDIR /usr/src/app
-ADD . /usr/src/app
+WORKDIR /app
+ADD . /app
 RUN npm install
 
-CMD ["/bin/sh", "-c", "npm start > /log/app.log 2>&1"]
+STOPSIGNAL SIGTERM
+
+CMD ["/app/entrypoint.sh"]
+
