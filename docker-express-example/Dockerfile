@@ -11,7 +11,5 @@ WORKDIR /app
 ADD . /app
 RUN npm install
 
-STOPSIGNAL SIGTERM
-
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["npm", "start"]
