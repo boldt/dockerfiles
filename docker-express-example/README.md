@@ -1,4 +1,4 @@
-# Simple Docker Example with Node 6.10.0 and Express.js
+# Simple Docker Example with Node and Express.js
 
 This Dockerfile is used to create the image [boldt/docker-express-example](https://hub.docker.com/r/boldt/docker-express-example/).
 
@@ -38,4 +38,3 @@ docker tag boldt/docker-express-example:latest boldt/docker-express-example:$VER
 docker push boldt/docker-express-example:latest
 docker push boldt/docker-express-example:$VERSION
 ```
-
