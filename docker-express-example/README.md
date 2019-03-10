@@ -1,4 +1,4 @@
-# Simple Docker Example with Node and Express.js
+# Simple Hello-World-Example with Node.js and Express.js
 
 This Dockerfile is used to create the image [boldt/docker-express-example](https://hub.docker.com/r/boldt/docker-express-example/).
 
