@@ -39,3 +39,4 @@ RUN apt-get update --fix-missing && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+

@@ -1,6 +1,16 @@
 # Simple Hello-World-Example with Node.js and Express.js
 
-This Dockerfile is used to create the image [boldt/docker-express-example](https://hub.docker.com/r/boldt/docker-express-example/).
+[![Gitlab](https://img.shields.io/static/v1.svg?label=Get%20the%20source%20code%20on&message=Github&color=555&style=popout&logo=github)](https://github.com/boldt/dockerfiles/tree/master/docker-express-example/)
+[![Docker Hub](https://img.shields.io/static/v1.svg?label=Get%20the%20container%20on&message=Docker%20Hub&color=555&style=popout&logo=docker)](https://hub.docker.com/r/boldt/docker-express-example/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/boldt/docker-express-example.svg)](https://hub.docker.com/r/boldt/docker-express-example/)
+
+## Description
+
+This docker image contains a webserver build with ode.js and Express.js. It has a simple endpoint which sais hello world.
+
+## Versions
+
+> TODO
 
 ## Use this image
 

@@ -1,15 +1,19 @@
-# Docker with Ubuntu + apache2 + mod_md
+# Ubuntu with apache2 + mod_md
 
-* Docker image: [boldt/ubuntu-apache2-mod_md](https://hub.docker.com/r/boldt/ubuntu-apache2-mod_md/)
-* Github Repo: [boldt/dockerfiles/ubuntu-apache2-mod_md](https://github.com/boldt/dockerfiles/tree/master/ubuntu-apache2-mod_md/).
+[![Gitlab](https://img.shields.io/static/v1.svg?label=Get%20the%20source%20code%20on&message=Github&color=555&style=popout&logo=github)](https://github.com/boldt/dockerfiles/tree/master/ubuntu-apache2-mod_md/)
+[![Docker Hub](https://img.shields.io/static/v1.svg?label=Get%20the%20container%20on&message=Docker%20Hub&color=555&style=popout&logo=docker)](https://hub.docker.com/r/boldt/ubuntu-apache2-mod_md/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/boldt/ubuntu-apache2-mod_md.svg)](https://hub.docker.com/r/boldt/ubuntu-apache2-mod_md/)
 
-The following versions are available:
+## Description
+
+This image contains the Apache web server with the mod_md plugin, which can be used to derive Let's Encrypt certificates.
+
+## Versions
 
 | Tag                 | Ubuntu  | apache  | mod_md | Image Size   |
 |-------------------- |-------- | ------- |------- | ------------ |
 | `0.0.2` (`latest`)  | 14.04.5 | 2.4.34  | 1.1.16 | 434 MB       |
 | `0.0.1`             | 14.04.5 | 2.4.29  | 1.0.3  | 431 MB       |
-
 
 
 ## Use this image
@@ -45,7 +49,6 @@ Even the certs are renewed automatically, the configuration still needs to be re
 # Runs the reload each sunday at midnight
 0 0 * * 0 docker exec -it ubuntu-apache2-mod_md /etc/init.d/apache2 reload
 ```
-
 
 ## Build and push
 
