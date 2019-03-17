@@ -44,10 +44,11 @@ docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.5 /bin/bash
 
 # Tag and Push
 
-(Automatic build by Docker Hub)
+Automatic build by Docker Hub, then:
 
 ```
-docker tag boldt/base-ubuntu-nvm-node-npm:0.0.5 boldt/base-ubuntu-nvm-node-npm:latest
-docker push boldt/base-ubuntu-nvm-node-npm:0.0.5
+docker pull boldt/base-ubuntu-nvm-node-npm
+docker tag boldt/base-ubuntu-nvm-node-npm:latest boldt/base-ubuntu-nvm-node-npm:0.0.6
+docker push boldt/base-ubuntu-nvm-node-npm:0.0.6
 docker push boldt/base-ubuntu-nvm-node-npm:latest
 ```
