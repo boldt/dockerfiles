@@ -10,13 +10,14 @@ This docker image is the default Ubuntu image with the Node Version Manager (nvm
 
 ## Versions
 
-| Tag                 | Ubuntu  | nvm     | node   | npm    | size   |
-|-------------------- |-------- | ------- |------- |------- | ------ |
-| `0.0.5` (`latest`)  | 18.04   | 0.33.11 | 10.9.0 | 6.2.0  | 154 MB |
-| `0.0.4`             | 18.04   | 0.33.11 | 10.5.0 | 6.1.0  | 155 MB |
-| `0.0.3`             | 16.04   | 0.33.8  | 8.11.1 | 5.6.0  | 185 MB |
-| `0.0.2`             | 14.04.5 | 0.33.2  | 5.8.0  | 3.7.3  | 237 MB |
-| `0.0.1`             | 14.04.5 | 0.33.2  | 5.8.0  | 3.7.3  | 390 MB |
+| Tag                 | Ubuntu  | nvm     | node    | npm    |
+|-------------------- |-------- | ------- |-------- |------- |
+| `0.0.6` (`latest`)  | 18.04   | 0.34.0  | 10.15.3 | 6.4.1  |
+| `0.0.5`             | 18.04   | 0.33.11 | 10.9.0  | 6.2.0  |
+| `0.0.4`             | 18.04   | 0.33.11 | 10.5.0  | 6.1.0  |
+| `0.0.3`             | 16.04   | 0.33.8  | 8.11.1  | 5.6.0  |
+| `0.0.2`             | 14.04.5 | 0.33.2  | 5.8.0   | 3.7.3  |
+| `0.0.1`             | 14.04.5 | 0.33.2  | 5.8.0   | 3.7.3  |
 
 ## Use this image
 
@@ -42,6 +43,8 @@ docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.5 /bin/bash
 ```
 
 # Tag and Push
+
+(Automatic build by Docker Hub)
 
 ```
 docker tag boldt/base-ubuntu-nvm-node-npm:0.0.5 boldt/base-ubuntu-nvm-node-npm:latest
