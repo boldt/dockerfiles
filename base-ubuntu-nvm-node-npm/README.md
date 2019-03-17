@@ -27,16 +27,16 @@ Add to your Dockerfile
 FROM boldt/base-ubuntu-nvm-node-npm
 ```
 
-## Build and push to hub.docker.com
+## Build
 
 (For own documentation)
 
 ```
 # Build
-docker build -t boldt/base-ubuntu-nvm-node-npm:0.0.5 .
+docker build -t boldt/base-ubuntu-nvm-node-npm
 
 # Detect versions
-docker run --rm -it boldt/base-ubuntu-nvm-node-npm:0.0.5 /bin/bash
+docker run --rm -it boldt/base-ubuntu-nvm-node-npm /bin/bash
   node --version
   npm --version
   nvm --version
